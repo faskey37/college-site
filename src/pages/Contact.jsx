@@ -1,4 +1,4 @@
-import Section from '../components/Section'
+
 import '../styles/components/contact.css'
 import '../styles/style.css'
 import '../styles/global.css'
