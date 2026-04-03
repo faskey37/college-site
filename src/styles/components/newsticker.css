@@ -1,0 +1,332 @@
+/* ========================
+   News Ticker Component
+=========================== */
+.news-ticker {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #1e40af;
+}
+
+.news-ticker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ========================
+   Icon Section
+=========================== */
+.news-ticker-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-ticker-icon svg {
+  font-size: 1.25rem;
+  color: #fbbf24;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ========================
+   Messages Section
+=========================== */
+.news-ticker-messages {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.news-ticker-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.news-ticker-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+/* ========================
+   View All Link
+=========================== */
+.news-ticker-link {
+  flex-shrink: 0;
+  display: none;
+}
+
+.view-all-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #bfdbfe;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.view-all-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
+}
+
+/* ========================
+   Responsive Design
+=========================== */
+@media (min-width: 768px) {
+  .news-ticker-text {
+    font-size: 1rem;
+  }
+  
+  .news-ticker-link {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-ticker {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .news-ticker-content {
+    gap: 0.75rem;
+  }
+  
+  .news-ticker-icon svg {
+    font-size: 1rem;
+  }
+  
+  .news-ticker-messages {
+    height: 1.75rem;
+  }
+  
+  .news-ticker-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-ticker {
+    padding: 0.5rem;
+  }
+  
+  .news-ticker-content {
+    gap: 0.5rem;
+  }
+  
+  .news-ticker-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* ========================
+   Hover Effects
+=========================== */
+.news-ticker-message:hover .news-ticker-text {
+  color: #fbbf24;
+  transition: color 0.2s ease;
+}
+
+.news-ticker:hover .news-ticker-icon svg {
+  animation-play-state: paused;
+  color: #f59e0b;
+}
+
+/* ========================
+   Color Variations
+=========================== */
+.news-ticker.urgent {
+  background-color: #dc2626;
+  border-bottom-color: #b91c1c;
+}
+
+.news-ticker.info {
+  background-color: #0891b2;
+  border-bottom-color: #0e7490;
+}
+
+.news-ticker.success {
+  background-color: #16a34a;
+  border-bottom-color: #15803d;
+}
+
+.news-ticker.warning {
+  background-color: #d97706;
+  border-bottom-color: #b45309;
+}
+
+/* ========================
+   Accessibility
+=========================== */
+.view-all-link:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+.news-ticker-message:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* ========================
+   Animation States
+=========================== */
+.news-ticker.paused .news-ticker-icon svg {
+  animation-play-state: paused;
+}
+
+/* ========================
+   Print Styles
+=========================== */
+@media print {
+  .news-ticker {
+    background-color: #f3f4f6 !important;
+    color: black !important;
+    border-bottom: 1px solid #d1d5db;
+  }
+  
+  .news-ticker-icon svg {
+    color: #374151 !important;
+    animation: none;
+  }
+  
+  .news-ticker-text {
+    color: black !important;
+  }
+  
+  .view-all-link {
+    color: #374151 !important;
+    text-decoration: underline;
+  }
+  
+  .news-ticker-link {
+    display: block;
+  }
+}
+
+/* ========================
+   Dark Mode Support (Optional)
+=========================== */
+@media (prefers-color-scheme: dark) {
+  .news-ticker {
+    background-color: #1e40af;
+  }
+  
+  .view-all-link {
+    color: #dbeafe;
+  }
+  
+  .view-all-link:hover {
+    color: white;
+  }
+}
+
+/* ========================
+   Motion Preferences
+=========================== */
+@media (prefers-reduced-motion: reduce) {
+  .news-ticker-icon svg {
+    animation: none;
+  }
+  
+  .news-ticker-message {
+    transition: none;
+  }
+  
+  .view-all-link {
+    transition: none;
+  }
+}
+
+/* ========================
+   High Contrast Mode
+=========================== */
+@media (prefers-contrast: high) {
+  .news-ticker {
+    border-bottom-width: 4px;
+  }
+  
+  .news-ticker-text {
+    font-weight: 600;
+  }
+  
+  .view-all-link {
+    border: 1px solid currentColor;
+  }
+}
+
+/* ========================
+   Loading State
+=========================== */
+.news-ticker.loading .news-ticker-text {
+  color: #9ca3af;
+}
+
+.news-ticker.loading .news-ticker-icon svg {
+  color: #9ca3af;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================
+   Error State
+=========================== */
+.news-ticker.error {
+  background-color: #dc2626;
+  border-bottom-color: #b91c1c;
+}
+
+.news-ticker.error .news-ticker-text {
+  font-style: italic;
+}
+
+/* ========================
+   Empty State
+=========================== */
+.news-ticker.empty .news-ticker-text {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.news-ticker.empty .news-ticker-icon svg {
+  color: #6b7280;
+  animation: none;
+}

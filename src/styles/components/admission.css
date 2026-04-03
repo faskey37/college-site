@@ -1,0 +1,562 @@
+/* Admissions Page Styles */
+.admissions-container {
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Hero Section */
+.admissions-hero {
+  position: relative;
+  height: 400px;
+  background-color: #1e3a8a;
+  display: flex;
+  align-items: center;
+}
+
+.admissions-hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.admissions-hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admissions-hero-content {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.admissions-hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.admissions-hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 32rem;
+}
+
+/* Section Styles */
+.admissions-section {
+  padding: 4rem 0;
+}
+
+.section-white {
+  background-color: white;
+}
+
+.section-gray {
+  background-color: #f9fafb;
+}
+
+/* Section Headers */
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #2563eb;
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Admission Process Cards */
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.process-card {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.process-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.process-icon-container {
+  background-color: #dbeafe;
+  color: #2563eb;
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.admission-process-icon {
+  font-size: 1.5rem;
+}
+
+.process-step-number {
+  background-color: #2563eb;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.process-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.process-card-description {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Eligibility Section */
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.eligibility-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eligibility-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.eligibility-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eligibility-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.eligibility-icon {
+  background-color: #dbeafe;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eligibility-icon svg {
+  width: 1rem;
+  height: 1rem;
+  color: #2563eb;
+}
+
+.eligibility-text {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Important Dates */
+.dates-container {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.date-item {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-item-highlight {
+  background-color: #dbeafe;
+}
+
+.date-event {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.date-icon {
+  margin-right: 0.75rem;
+  color: #6b7280;
+}
+
+.date-item-highlight .date-icon {
+  color: #2563eb;
+}
+
+.date-item-highlight .date-event {
+  color: #1e40af;
+}
+
+.date-value {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.date-item-highlight .date-value {
+  color: #1e40af;
+}
+
+/* Fee Structure */
+.fee-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.fee-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fee-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table thead {
+  background-color: #f9fafb;
+}
+
+.fee-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fee-table td {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.fee-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fee-total {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Payment Info */
+.payment-info {
+  background-color: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 56rem;
+  margin: 2rem auto 0;
+}
+
+.payment-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.payment-title svg {
+  margin-right: 0.5rem;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.payment-subtitle {
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.payment-methods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #6b7280;
+}
+
+.payment-method svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  color: #10b981;
+}
+
+.payment-description {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.scholarship-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-container {
+  background-color: #dbeafe;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-info-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info-title svg {
+  margin-right: 0.5rem;
+  color: #2563eb;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.contact-icon {
+  margin-right: 0.75rem;
+  color: #2563eb;
+  margin-top: 0.25rem;
+}
+
+.contact-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.contact-label {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.contact-value {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.apply-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.apply-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.apply-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.apply-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.apply-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.apply-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.apply-secondary {
+  background-color: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.apply-secondary:hover {
+  background-color: #f3f4f6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .admissions-hero-title {
+    font-size: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .eligibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .payment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

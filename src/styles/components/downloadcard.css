@@ -1,0 +1,703 @@
+/* ===========================================
+   Global Typography & Spacing
+=========================================== */
+.downloads-page {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #334155;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.downloads-page h1,
+.downloads-page h2,
+.downloads-page h3 {
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.025em;
+}
+
+.downloads-page h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+.downloads-page h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.downloads-page h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.downloads-page p {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 65ch;
+}
+
+/* ===========================================
+   Hero Section - Enhanced with Parallax Effect
+=========================================== */
+.hero-section {
+  position: relative;
+  height: clamp(20rem, 50vh, 32rem);
+  background-color: #1e40af;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.hero-section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+  will-change: transform;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 80ch;
+}
+
+.hero-section h1 {
+  color: white;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out;
+  margin-top: 150px;
+}
+
+.hero-section p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  margin-top: 25px;
+}
+
+/* ===========================================
+   Section Headers - With Decorative Elements
+=========================================== */
+.section-header {
+  position: relative;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border-radius: 2px;
+}
+
+.section-header p {
+  margin: 1rem auto 0;
+}
+
+/* ===========================================
+   Search & Filters - Modern Glass Morphism
+=========================================== */
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  flex: 1 1 300px;
+}
+
+.search-bar input {
+  width: 100%;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Fix for search and filter section */
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.file-type-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.search-bar input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex: 1 1 auto;
+}
+
+.category-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+
+.filter-btn {
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn:hover {
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn:active {
+  transform: translateY(0);
+}
+
+/* ===========================================
+   File Type Buttons - Animated Chip Style
+=========================================== */
+.file-type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.file-type-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.file-type-btn svg {
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.file-type-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.file-type-btn.pdf {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.file-type-btn.pdf:hover {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.file-type-btn.word {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.file-type-btn.word:hover {
+  background-color: #bfdbfe;
+  color: #1e3a8a;
+}
+
+.file-type-btn.excel {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.file-type-btn.excel:hover {
+  background-color: #bbf7d0;
+  color: #14532d;
+}
+
+.file-type-btn.other {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.file-type-btn.other:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+/* ===========================================
+   Download Cards - Modern Card Design
+=========================================== */
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.download-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2563eb, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(203, 213, 225, 0.5);
+}
+
+.download-card:hover::before {
+  width: 6px;
+}
+
+.download-card-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.file-icon {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  font-size: 1.75rem;
+}
+
+.download-card h3 {
+  font-size: 1.125rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.download-card p {
+  font-size: 0.9375rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.download-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  margin-top: auto;
+}
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.download-link:hover {
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.download-link:active {
+  transform: translateY(0);
+}
+
+/* ===========================================
+   Pagination - Modern Style
+=========================================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+/* Fix for "Previous123Next" pagination */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination a, .pagination span {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+  background-color: #f3f4f6;
+}
+
+.pagination .active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-item {
+  margin: 0;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  background-color: white;
+  color: #64748b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.pagination-item:first-child .pagination-link {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.pagination-item:last-child .pagination-link {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.pagination-link:hover {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.pagination-link.active {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* ===========================================
+   Request Form - Modern Form Design
+=========================================== */
+.request-doc-section {
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  padding: 4rem 0;
+}
+
+.request-doc-form {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.request-doc-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-size: 0.9375rem;
+}
+
+.request-doc-form input,
+.request-doc-form textarea,
+.request-doc-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.request-doc-form input:focus,
+.request-doc-form textarea:focus,
+.request-doc-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background-color: white;
+}
+
+.request-doc-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===========================================
+   Animations & Micro-interactions
+=========================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===========================================
+   Responsive Adjustments
+=========================================== */
+@media (max-width: 768px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar,
+  .filter-controls {
+    width: 100%;
+  }
+  
+  .downloads-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .request-doc-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-type-filters {
+    justify-content: center;
+  }
+  
+  .pagination-list {
+    flex-wrap: wrap;
+    border-radius: 8px;
+  }
+  
+  .pagination-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .pagination-item:first-child .pagination-link,
+  .pagination-item:last-child .pagination-link {
+    border-radius: 8px;
+  }
+}
+/* General spacing fixes */
+.section-spacing {
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.card-spacing {
+  margin-bottom: 1.5rem;
+}
+
+/* Fix for "Can't Find What You Need" heading */
+.section-title {
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Fix for document cards grid */
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}

@@ -1,0 +1,103 @@
+.placements-page {
+  font-family: 'Inter', sans-serif;
+}
+
+.placements-hero {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.placements-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.stats-overview {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.highlight {
+  background: #2563eb;
+  color: white;
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.yearly-stats, .department-stats {
+  padding: 4rem 0;
+}
+
+.stats-table {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.stats-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.stats-table th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.dept-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dept-stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.stat-fill {
+  height: 100%;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}

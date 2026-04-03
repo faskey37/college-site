@@ -1,0 +1,139 @@
+/* faculty.css */
+
+.faculty-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.faculty-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faculty-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.faculty-hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.faculty-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faculty-hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.faculty-hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Department Faculty Section */
+.faculty-departments-section {
+  margin-top: 3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #4299e1;
+  margin: 0 auto 1.5rem;
+}
+
+.department-faculty-group {
+  margin-bottom: 3rem;
+}
+
+.department-heading {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.faculty-card-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.faculty-card-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .faculty-hero {
+    height: 300px;
+  }
+  
+  .faculty-hero-title {
+    font-size: 2rem;
+  }
+  
+  .faculty-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .department-heading {
+    font-size: 1.25rem;
+  }
+  
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+}

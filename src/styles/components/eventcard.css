@@ -1,0 +1,355 @@
+/* ========================
+   Event Card Component
+=========================== */
+.event-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================
+   Event Image Section
+=========================== */
+.event-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.event-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+}
+
+.event-category-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ========================
+   Event Content Section
+=========================== */
+.event-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.event-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  flex: 1;
+  
+  /* Text truncation for 2 lines */
+  display: -webkit-box;
+ 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================
+   Event Details Section
+=========================== */
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-detail-item {
+  display: flex;
+  align-items: center;
+  color: #374151;
+}
+
+.event-detail-icon {
+  margin-right: 0.5rem;
+  color: #2563eb;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.event-detail-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* ========================
+   Event Footer Section
+=========================== */
+.event-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.event-status {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.event-details-button {
+  font-size: 0.875rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.event-details-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .event-image {
+    height: 10rem;
+  }
+  
+  .event-content {
+    padding: 0.75rem;
+  }
+  
+  .event-title {
+    font-size: 1rem;
+  }
+  
+  .event-description {
+    font-size: 0.8rem;
+  }
+  
+  .event-detail-text {
+    font-size: 0.8rem;
+  }
+  
+  .event-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .event-details-button {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-image {
+    height: 8rem;
+  }
+  
+  .event-content {
+    padding: 0.5rem;
+  }
+  
+  .event-details {
+    gap: 0.25rem;
+  }
+  
+  .event-detail-text {
+    font-size: 0.75rem;
+  }
+  
+  .event-details-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* ========================
+   Status Variations
+=========================== */
+.event-status.upcoming {
+  color: #d97706;
+}
+
+.event-status.open {
+  color: #16a34a;
+}
+
+.event-status.closed {
+  color: #dc2626;
+}
+
+.event-status.completed {
+  color: #6b7280;
+}
+
+/* ========================
+   Category Badge Variations
+=========================== */
+.event-category-badge.technical {
+  background-color: #2563eb;
+}
+
+.event-category-badge.cultural {
+  background-color: #7c3aed;
+}
+
+.event-category-badge.academic {
+  background-color: #16a34a;
+}
+
+.event-category-badge.sports {
+  background-color: #dc2626;
+}
+
+.event-category-badge.workshop {
+  background-color: #d97706;
+}
+
+.event-category-badge.networking {
+  background-color: #0891b2;
+}
+
+/* ========================
+   Accessibility
+=========================== */
+.event-details-button:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.event-card:focus-within {
+  box-shadow: 0 0 0 2px #2563eb;
+}
+
+/* ========================
+   Loading State
+=========================== */
+.event-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.event-card.loading .event-image {
+  background-color: #f3f4f6;
+}
+
+.event-card.loading .event-details-button {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ========================
+   Hover Effects
+=========================== */
+.event-card:hover .event-title {
+  color: #2563eb;
+}
+
+.event-card:hover .event-category-badge {
+  transform: scale(1.05);
+}
+
+/* ========================
+   Print Styles
+=========================== */
+@media print {
+  .event-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .event-image {
+    height: 6rem;
+  }
+  
+  .event-details-button {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+  }
+  
+  .event-category-badge {
+    background-color: #000 !important;
+    color: white;
+  }
+}
+
+/* ========================
+   Animation Support
+=========================== */
+@media (prefers-reduced-motion: reduce) {
+  .event-card {
+    transition: none;
+  }
+  
+  .event-details-button {
+    transition: none;
+  }
+  
+  .event-category-badge {
+    transition: none;
+  }
+}
+
+/* ========================
+   Dark Mode Support (Optional)
+=========================== */
+@media (prefers-color-scheme: dark) {
+  .event-card {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .event-title {
+    color: #f9fafb;
+  }
+  
+  .event-description {
+    color: #d1d5db;
+  }
+  
+  .event-detail-item {
+    color: #e5e7eb;
+  }
+  
+  .event-footer {
+    border-color: #4b5563;
+  }
+}
