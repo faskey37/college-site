@@ -37,19 +37,15 @@ import {
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB-xnUyuwiHwvw_WJqx3DUfDwqWSOfxIxE",
-  authDomain: "anjuman-990dc.firebaseapp.com",
-  projectId: "anjuman-990dc",
-  storageBucket: "anjuman-990dc.firebasestorage.app",
-  messagingSenderId: "333292132820",
-  appId: "1:333292132820:web:bd81765b6fd5aa766c1e41",
-  measurementId: "G-FB9VRNW1R2"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Export initialized instances
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
